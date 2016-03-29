@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hall Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hall name</th>
+      <th>Hall id</th>
+      <th>Hall type</th>
+      <th>Phone number</th>
+      <th>Contact email</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hall_details.each do |hall_detail| %>
+      <tr>
+        <td><%= hall_detail.Hall_Name %></td>
+        <td><%= hall_detail.Hall_ID %></td>
+        <td><%= hall_detail.Hall_Type %></td>
+        <td><%= hall_detail.Phone_Number %></td>
+        <td><%= hall_detail.Contact_Email %></td>
+        <td><%= hall_detail.Address %></td>
+        <td><%= hall_detail.City %></td>
+        <td><%= hall_detail.State %></td>
+        <td><%= link_to 'Show', hall_detail %></td>
+        <td><%= link_to 'Edit', edit_hall_detail_path(hall_detail) %></td>
+        <td><%= link_to 'Destroy', hall_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hall detail', new_hall_detail_path %>

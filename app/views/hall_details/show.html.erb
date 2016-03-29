@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hall name:</strong>
+  <%= @hall_detail.Hall_Name %>
+</p>
+
+<p>
+  <strong>Hall id:</strong>
+  <%= @hall_detail.Hall_ID %>
+</p>
+
+<p>
+  <strong>Hall type:</strong>
+  <%= @hall_detail.Hall_Type %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @hall_detail.Phone_Number %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @hall_detail.Contact_Email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @hall_detail.Address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @hall_detail.City %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @hall_detail.State %>
+</p>
+
+<%= link_to 'Edit', edit_hall_detail_path(@hall_detail) %> |
+<%= link_to 'Back', hall_details_path %>

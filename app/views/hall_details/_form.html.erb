@@ -1,0 +1,49 @@
+<%= form_for(@hall_detail) do |f| %>
+  <% if @hall_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hall_detail.errors.count, "error") %> prohibited this hall_detail from being saved:</h2>
+
+      <ul>
+      <% @hall_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Hall_Name %><br>
+    <%= f.text_field :Hall_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Hall_ID %><br>
+    <%= f.text_field :Hall_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :Hall_Type %><br>
+    <%= f.text_field :Hall_Type %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone_Number %><br>
+    <%= f.text_field :Phone_Number %>
+  </div>
+  <div class="field">
+    <%= f.label :Contact_Email %><br>
+    <%= f.text_field :Contact_Email %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :State %><br>
+    <%= f.text_field :State %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
