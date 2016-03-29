@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_with_hall.email %>
+</p>
+
+<p>
+  <strong>Hall id:</strong>
+  <%= @user_with_hall.Hall_ID %>
+</p>
+
+<%= link_to 'Edit', edit_user_with_hall_path(@user_with_hall) %> |
+<%= link_to 'Back', user_with_halls_path %>

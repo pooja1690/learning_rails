@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User With Halls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Hall id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_with_halls.each do |user_with_hall| %>
+      <tr>
+        <td><%= user_with_hall.email %></td>
+        <td><%= user_with_hall.Hall_ID %></td>
+        <td><%= link_to 'Show', user_with_hall %></td>
+        <td><%= link_to 'Edit', edit_user_with_hall_path(user_with_hall) %></td>
+        <td><%= link_to 'Destroy', user_with_hall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User with hall', new_user_with_hall_path %>
